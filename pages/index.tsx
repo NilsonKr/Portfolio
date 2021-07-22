@@ -33,7 +33,11 @@ const Home = ({ data }: { data: TDataFormat }) => {
 	return (
 		<div>
 			<Header />
-			<h1>Home</h1>
+			<div className='fillHome'></div>
+			<div className='fillHome'></div>
+			<div className='fillHome'></div>
+			<div className='fillHome'></div>
+			<div className='fillHome'></div>
 		</div>
 	);
 };

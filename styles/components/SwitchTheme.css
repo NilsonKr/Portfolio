@@ -1,0 +1,44 @@
+.theme__handler {
+	position: relative;
+	width: 100px;
+	height: 40px;
+}
+
+.theme--options {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.theme--options img {
+	width: 20px;
+	height: 20px;
+}
+
+.theme__handler input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.theme--pointer {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--text-dark-main);
+	box-shadow: -2px -2px 6px rgba(233, 233, 233, 0.5), 2px 2px 6px rgba(169, 169, 169, 0.5);
+	transition: transform 1s;
+	z-index: 2;
+}
+
+.theme__handler input:checked + .theme--pointer {
+	transform: translateX(50px);
+}
