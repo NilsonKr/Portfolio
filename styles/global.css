@@ -8,8 +8,8 @@
 	--special-color: #f96aff;
 	--light-bg: #fff;
 	--dark-bg: #1d1d1d;
-	--text-light-main: #000;
-	--text-light-second: #9e9e9e;
+	--text-ligth-main: #000;
+	--text-ligth-second: #9e9e9e;
 	--text-dark-main: #fff;
 	--text-dark-second: #cfcfcfcf;
 	--main-font: 'Open Sans', sans-serif;
@@ -17,6 +17,5 @@
 }
 
 body {
-	background-color: aquamarine;
 	font-family: var(--secondary-font);
 }
