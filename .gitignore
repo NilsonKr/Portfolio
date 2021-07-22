@@ -1,6 +1,7 @@
 # Reserved Assets
 favicon.ico
 data
+.env.local
 
 # Logs
 logs
