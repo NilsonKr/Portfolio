@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Github from '@components/SVGIcons/github';
+
 const Home = () => {
 	return (
 		<div>
 			<h1>Hello</h1>
-			<img src='/images/LigthLogo.png' alt='asdasd' />
+			<Github />
 		</div>
 	);
 };
