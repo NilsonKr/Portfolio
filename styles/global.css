@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--special-color: #f96aff;
+	--light-bg: #fff;
+	--dark-bg: #1d1d1d;
+	--text-light-main: #000;
+	--text-light-second: #9e9e9e;
+	--text-dark-main: #fff;
+	--text-dark-second: #cfcfcfcf;
+	--main-font: 'Open Sans', sans-serif;
+	--secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: aquamarine;
+	font-family: var(--secondary-font);
+}
