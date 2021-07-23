@@ -1,0 +1,74 @@
+.contact__section {
+	display: grid;
+	margin-top: 70px;
+}
+
+.contact--title {
+	font-size: 35px;
+	font-family: var(--main-font);
+	text-align: center;
+}
+
+.contact--subtitle {
+	font-size: 24px;
+	color: var(--text-ligth-second);
+	text-align: center;
+}
+
+.contact__form {
+	width: 80%;
+	margin: 30px auto 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.contact--field {
+	display: block;
+	margin: 15px 0;
+	width: 100%;
+}
+
+.contact--field p {
+	font-family: var(--main-font);
+	font-weight: 800;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+.contact--field input,
+.contact--message textarea {
+	padding: 8px;
+	font-size: 18px;
+	color: var(--text-ligth-second);
+	border-radius: 5px;
+	outline: none;
+	border: 2px solid var(--text-ligth-main);
+	width: 100%;
+	transition: box-shadow 0.6s;
+}
+
+.contact--message textarea {
+	min-height: 150px;
+}
+
+.contact--field input:focus,
+.contact--message textarea:focus {
+	box-shadow: 0 0 0 3px var(--special-color);
+}
+
+.contact--submit {
+	align-self: flex-end;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	padding: 12px;
+	background-color: var(--special-color);
+}
+
+.contact--submit img {
+	vertical-align: middle;
+	width: 35px;
+	height: 35px;
+}

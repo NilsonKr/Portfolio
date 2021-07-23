@@ -35,3 +35,8 @@ body {
 	box-shadow: inset 0px 0px 60px #ffffff80;
 	backdrop-filter: blur(3px);
 }
+
+::selection {
+	background-color: aquamarine;
+	color: var(--text-ligth-main);
+}

@@ -26,9 +26,18 @@ const ProjectCard = ({ project, inverted, isSecondary, position }: Props) => {
 			</div>
 			<div className='project__stack'>
 				<div className='project--tech'>
-					{project.technologies.ligth.map(icon => (
-						<img src={icon} alt='Technologie' key={`${project.id}${icon}`} />
-					))}
+					{project.technologies.ligth.map(icon => {
+						const iconName: string = icon.split('/')[2];
+
+						return (
+							<img
+								title={iconName.substring(iconName.length - 4, 0)}
+								src={icon}
+								alt='Technologie'
+								key={`${project.id}${icon}`}
+							/>
+						);
+					})}
 				</div>
 				<div className='project--links'>
 					<div className='project--repo'>
@@ -48,7 +57,11 @@ const ProjectCard = ({ project, inverted, isSecondary, position }: Props) => {
 				</div>
 			</div>
 			<div className='project__pictures'>
-				<img src={project.images.X1} alt='' />
+				<img
+					src={project.images.X1}
+					title={`${project.title}${project.complement} Picture`}
+					alt={`${project.title}${project.complement}`}
+				/>
 			</div>
 		</div>
 	);

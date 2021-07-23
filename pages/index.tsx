@@ -6,6 +6,7 @@ import projectsData from '../data/projects';
 import Header from '@components/Header';
 import Landing from '@components/Landing';
 import Projects from '@components/Projects';
+import Contact from '@components/Contact';
 
 // export const getStaticProps: GetStaticProps = async () => {
 // 	//Fetch Portfolio Data
@@ -37,6 +38,7 @@ const Home = () => {
 			<Header />
 			<Landing landingData={landingData} />
 			<Projects projectsData={projectsData} />
+			<Contact />
 		</>
 	);
 };

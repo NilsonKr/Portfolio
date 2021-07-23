@@ -6,6 +6,7 @@
 			'main-2 main-2'
 			'main-3 main-3'
 			'secondary-4 secondary-5';
+		gap: 150px;
 	}
 	.project {
 		grid-template-areas:
@@ -71,14 +72,12 @@
 	.secondary-5 .project__stack {
 		justify-self: end;
 	}
-
-	/* .secondary-5 .project--links,
-	.secondary-4 .project--links {
-		margin-top: 20px;
-	} */
 }
 
 @media screen and (min-width: 1440px) {
+	.projects--header a {
+		font-size: 55px;
+	}
 	.projects__list {
 		width: 90%;
 		margin: 100px auto 0;
@@ -99,7 +98,7 @@
 	}
 
 	.secondary-4 .project__pictures img {
-		width: clamp(150px, 100%, 200px);
-		height: 150px;
+		width: clamp(150px, 100%, 220px);
+		height: 180px;
 	}
 }
