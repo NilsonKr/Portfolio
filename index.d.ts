@@ -19,9 +19,10 @@ interface TLanding {
 
 interface TProjects {
 	id: string;
-	complement: string;
 	title: string;
+	complement: string;
 	description: string;
+	isSecondary?: boolean;
 	images: TImage;
 	technologies: TtechIcons;
 	social: {

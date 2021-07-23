@@ -8,6 +8,7 @@ import '../styles/components/SwitchTheme.css';
 import '../styles/components/Landing.css';
 import '../styles/components/LandingResponsive.css';
 import '../styles/components/Projects.css';
+import '../styles/components/ProjectsResponsive.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return <Component {...pageProps} />;
