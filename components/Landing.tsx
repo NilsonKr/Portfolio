@@ -4,7 +4,7 @@ const Landing = () => {
 	return (
 		<section className='landing'>
 			<div className='landing__description'>
-				<h2 className='desc--greeting'>Hi i'm</h2>
+				<h2 className='desc--greeting'>Hi I'm...</h2>
 				<h1 className='desc--name'>NILSON DIAZ</h1>
 				<h3 className='desc--work'>Web Developer / Front End</h3>
 				<p>

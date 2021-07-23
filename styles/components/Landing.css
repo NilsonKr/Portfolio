@@ -1,10 +1,15 @@
 .landing {
 	display: grid;
 	place-items: center;
+	grid-template-areas:
+		'description'
+		'thumbnails'
+		'techhub';
 	margin-top: 120px;
 }
 
 .landing__description {
+	grid-area: description;
 	text-align: center;
 }
 
@@ -23,15 +28,16 @@
 
 .landing__description p {
 	width: 90%;
-	margin: 10px auto 20px;
+	margin: 10px 0 20px;
 	color: var(--text-ligth-second);
 }
 
 .landing__thumbnails {
+	grid-area: thumbnails;
 	position: relative;
 	width: 100%;
-	max-width: 400px;
 	height: 250px;
+	max-width: 400px;
 	perspective: 5000px;
 }
 
@@ -39,6 +45,7 @@
 	position: absolute;
 	width: 180px;
 	height: 110px;
+
 	border-radius: 15px;
 	transition: transform 1s;
 	transform: rotateX(25deg) rotateY(-25deg) translateY(5px);
@@ -51,7 +58,7 @@
 }
 
 .landing__thumbnails div::after {
-	content: ' ';
+	content: '';
 	position: absolute;
 	top: -65%;
 	left: -50%;
@@ -76,12 +83,12 @@
 }
 
 .landing__thumbnails div:nth-child(2) {
-	top: 20%;
-	right: 8%;
+	top: 15%;
+	right: 5%;
 }
 
 .landing__thumbnails div:nth-child(3) {
-	bottom: 25%;
+	bottom: 15%;
 	left: 15%;
 }
 
@@ -101,10 +108,13 @@
 }
 
 .landing__technologies {
+	grid-area: techhub;
 	position: relative;
 	overflow: hidden;
 	width: clamp(320px, 100%, 800px);
-	height: 300px;
+	min-height: 300px;
+	height: 100%;
+	max-height: 500px;
 }
 
 .landing--figure {
