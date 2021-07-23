@@ -5,6 +5,7 @@ import '../styles/components/Header.css';
 import '../styles/components/HeaderMobile.css';
 import '../styles/components/HeaderDesktop.css';
 import '../styles/components/SwitchTheme.css';
+import '../styles/components/Landing.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return <Component {...pageProps} />;
