@@ -1,4 +1,6 @@
 .landing {
+	display: grid;
+	place-items: center;
 	margin-top: 120px;
 }
 
@@ -28,7 +30,8 @@
 .landing__thumbnails {
 	position: relative;
 	width: 100%;
-	height: 300px;
+	max-width: 400px;
+	height: 250px;
 	perspective: 5000px;
 }
 
@@ -38,7 +41,7 @@
 	height: 110px;
 	border-radius: 15px;
 	transition: transform 1s;
-	transform: rotateX(25deg) rotateY(-25deg) translate(5px, 5px);
+	transform: rotateX(25deg) rotateY(-25deg) translateY(5px);
 	overflow: hidden;
 }
 
@@ -69,21 +72,21 @@
 
 .landing__thumbnails div:nth-child(1) {
 	top: 10%;
-	left: 2%;
+	left: 10%;
 }
 
 .landing__thumbnails div:nth-child(2) {
 	top: 20%;
-	right: 2%;
+	right: 8%;
 }
 
 .landing__thumbnails div:nth-child(3) {
 	bottom: 25%;
-	left: 10%;
+	left: 15%;
 }
 
 .landing__thumbnails:hover div {
-	transform: rotateX(0deg) rotateY(0deg) translate(0, -5px);
+	transform: rotateX(0deg) rotateY(0deg) translateY(-5px);
 }
 
 .landing__thumbnails:hover div::after {
@@ -95,4 +98,56 @@
 		rgba(255, 255, 255, 0) 100%
 	);
 	transform: rotateZ(45deg) translate(-55px, -30px);
+}
+
+.landing__technologies {
+	position: relative;
+	overflow: hidden;
+	width: clamp(320px, 100%, 800px);
+	height: 300px;
+}
+
+.landing--figure {
+	width: 100%;
+	height: 100%;
+}
+
+.landing__techhub {
+	position: absolute;
+	top: 0;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	width: 100%;
+	height: 100%;
+}
+
+.landing__techhub img {
+	width: 25px;
+	height: 25px;
+}
+
+.techhub--javascript {
+	grid-row: 5 / span 1;
+	grid-column: 5 / span 1;
+}
+.techhub--react {
+	grid-row: 7 / span 1;
+	grid-column: 7 / span 1;
+}
+.techhub--redux {
+	grid-row: 9 / span 1;
+	grid-column: 5 / span 1;
+}
+.techhub--next {
+	grid-row: 7 / span 1;
+	grid-column: 4 / span 1;
+}
+.techhub--css {
+	grid-row: 9 / span 1;
+	grid-column: 8 / span 1;
+}
+.techhub--node {
+	grid-row: 6 / span 1;
+	grid-column: 9 / span 1;
 }
