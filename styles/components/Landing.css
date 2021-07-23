@@ -74,7 +74,6 @@
 	);
 	transform: rotateZ(25deg);
 	transition: transform 0.5s;
-	z-index: 1;
 }
 
 .landing__thumbnails div:nth-child(1) {

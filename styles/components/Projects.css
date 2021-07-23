@@ -1,0 +1,81 @@
+.projects__container {
+	margin-top: 50px;
+}
+
+.projects--header {
+	text-align: center;
+}
+
+.projects--header a {
+	text-decoration: none;
+	font-size: 40px;
+	font-weight: 800;
+	font-family: var(--main-font);
+	color: var(--text-ligth-main);
+	cursor: pointer;
+}
+
+.projects__list {
+	display: grid;
+	gap: 35px;
+	margin-top: 40px;
+	padding: 0 10px;
+}
+
+.project--title {
+	font-size: 28px;
+	font-family: var(--main-font);
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.project--title span {
+	color: var(--special-color);
+}
+
+.project__description p {
+	color: var(--text-ligth-second);
+}
+
+.project--tech {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.project--tech img {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+}
+
+.project--links div {
+	display: flex;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.project--repo a {
+	text-decoration: none;
+	color: var(--text-ligth-second);
+	font-weight: 500;
+	margin-left: 5px;
+}
+
+.project--web a {
+	text-decoration: none;
+	color: var(--special-color);
+	margin-left: 5px;
+}
+
+.project__pictures {
+	margin-top: 20px;
+	text-align: center;
+}
+.project__pictures img {
+	width: clamp(300px, 100%, 500px);
+	max-height: 400px;
+}
+
+.projects--header a:hover .githubIcon path {
+	fill: var(--special-color);
+}

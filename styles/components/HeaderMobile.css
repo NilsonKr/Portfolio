@@ -13,6 +13,7 @@
 .navbar__mobile--sticky {
 	position: fixed;
 	top: 0;
+	z-index: 10;
 }
 
 .navbar__open--symbol {
@@ -20,7 +21,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* border-bottom: 1px solid var(--text-ligth-main); */
 	padding: 5px 0;
 	background: #fff;
 	cursor: pointer;

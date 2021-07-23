@@ -1,8 +1,6 @@
-import landingData from '../data/landing';
-
-const Landing = () => {
+const Landing = ({ landingData }: { landingData: TLanding }) => {
 	return (
-		<section className='landing'>
+		<section className='landing' id='landing'>
 			<div className='landing__description'>
 				<h2 className='desc--greeting'>Hi I'm...</h2>
 				<h1 className='desc--name'>NILSON DIAZ</h1>

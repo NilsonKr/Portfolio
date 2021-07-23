@@ -1,10 +1,11 @@
 import React from 'react';
 
-const github = () => {
+const github = ({ size }: { size: string }) => {
 	return (
 		<svg
-			width='50'
-			height='49'
+			className='githubIcon'
+			width={size}
+			height={size}
 			viewBox='0 0 50 49'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'

@@ -1,8 +1,11 @@
 // import {  useState } from 'react';
 // import { GetStaticProps } from 'next';
+import landingData from '../data/landing';
+import projectsData from '../data/projects';
 
 import Header from '@components/Header';
 import Landing from '@components/Landing';
+import Projects from '@components/Projects';
 
 // export const getStaticProps: GetStaticProps = async () => {
 // 	//Fetch Portfolio Data
@@ -32,7 +35,8 @@ const Home = () => {
 	return (
 		<>
 			<Header />
-			<Landing />
+			<Landing landingData={landingData} />
+			<Projects projectsData={projectsData} />
 		</>
 	);
 };
