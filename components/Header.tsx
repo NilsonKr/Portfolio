@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import useMediaQuery from 'hooks/useMediaQuery';
 
 import HeaderMobile from './HeaderMobile';
 import HeaderDesktop from './HeaderDesktop';
 
 const Header = () => {
+	const [isMobile] = useMediaQuery(1024, 'width');
 	const [isOpen, openHeader] = useState<boolean>(false);
 
 	const handleOpenMobile = () => {
@@ -12,8 +14,11 @@ const Header = () => {
 
 	return (
 		<header>
-			{/* <HeaderMobile isOpen={isOpen} setOpen={handleOpenMobile} /> */}
-			<HeaderDesktop />
+			{isMobile ? (
+				<HeaderDesktop />
+			) : (
+				<HeaderMobile isOpen={isOpen} setOpen={handleOpenMobile} />
+			)}
 		</header>
 	);
 };

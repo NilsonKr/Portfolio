@@ -24,6 +24,8 @@ const HeaderMobile = ({ isOpen, setOpen }: MobileProps) => {
 		});
 
 		observer.observe(trackElement.current as HTMLElement);
+
+		return () => observer.disconnect();
 	}, []);
 
 	return (
@@ -45,7 +47,9 @@ const HeaderMobile = ({ isOpen, setOpen }: MobileProps) => {
 						className={`navbar__open--line  ${isOpen ? 'close--line2' : 'open--line2'}`}
 					></div>
 				</div>
-				<nav className={`navbar__mobile--items ${isOpen && 'open--items__mobile'} `}>
+				<nav
+					className={`navbar navbar__mobile--items ${isOpen && 'open--items__mobile'} `}
+				>
 					<ul>
 						<li>
 							<a href='#landing'>Home</a>

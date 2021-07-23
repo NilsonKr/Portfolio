@@ -23,6 +23,7 @@
 	/* border-bottom: 1px solid var(--text-ligth-main); */
 	padding: 5px 0;
 	background: #fff;
+	cursor: pointer;
 }
 
 .navbar__open--line {
