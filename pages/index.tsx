@@ -50,7 +50,7 @@ const Home = () => {
 					<EnvelopeIcon size='30' color={themeContext.background} />
 				</a>
 			</ContactFloatIcon>
-			<Projects projectsData={projectsData} />
+			<Projects projectsData={projectsData} theme={themeContext} />
 			<Contact extras={extras} />
 			<Footer image={extras.footer.X1} />
 		</>

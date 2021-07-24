@@ -11,9 +11,17 @@ type Props = {
 	isSecondary?: boolean;
 	position: number;
 	iconColor: string;
+	themeStyle: string;
 };
 
-const ProjectCard = ({ project, inverted, isSecondary, position, iconColor }: Props) => {
+const ProjectCard = ({
+	project,
+	inverted,
+	isSecondary,
+	position,
+	iconColor,
+	themeStyle,
+}: Props) => {
 	return (
 		<div
 			className={`project ${inverted && 'inverted'} ${
@@ -29,7 +37,7 @@ const ProjectCard = ({ project, inverted, isSecondary, position, iconColor }: Pr
 			</DescriptionStyled>
 			<div className='project__stack'>
 				<div className='project--tech'>
-					{project.technologies.ligth.map(icon => {
+					{project.technologies[themeStyle].map(icon => {
 						const iconName: string = icon.split('/')[2];
 
 						return (

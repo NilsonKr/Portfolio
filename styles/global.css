@@ -44,36 +44,3 @@ body {
 	background-color: aquamarine;
 	color: var(--text-ligth-main);
 }
-
-.footer__container {
-	position: relative;
-	margin-top: 80px;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	height: 100px;
-}
-
-.footer__container img {
-	position: absolute;
-	height: 100%;
-	z-index: -1;
-}
-
-.footer__container p {
-	color: var(--text-ligth-main);
-	margin-bottom: 10px;
-}
-
-@media screen and (min-width: 1024px) {
-	.footer__container {
-		height: 200px;
-	}
-	.footer__container p {
-		font-size: 18px;
-	}
-	.contact--fixedIcon {
-		bottom: 20px;
-		right: 20px;
-	}
-}

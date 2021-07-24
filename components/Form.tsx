@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { FieldTitleStyled } from 'styles/styledComponents/Contact';
+
 const Form = () => {
 	return (
 		<form
@@ -10,15 +12,15 @@ const Form = () => {
 			}}
 		>
 			<label className='contact--field'>
-				<p>Name</p>
+				<FieldTitleStyled>Name</FieldTitleStyled>
 				<input type='text' name='name' placeholder='Your Name' />
 			</label>
 			<label className='contact--field'>
-				<p>E-mail</p>
+				<FieldTitleStyled>E-mail</FieldTitleStyled>
 				<input type='text' name='email' placeholder='someone@gmail.com' />
 			</label>
 			<label className='contact--field contact--message'>
-				<p>Message</p>
+				<FieldTitleStyled>Message</FieldTitleStyled>
 				<textarea name='message' id=''></textarea>
 			</label>
 			<button className='contact--submit' type='submit'>

@@ -11,6 +11,14 @@ const ContactFloatIcon = styled.div`
 	border-radius: 50%;
 	background-color: ${p => p.theme.textMain};
 	line-height: 0;
+	z-index: 10;
+
+	@media screen and (min-width: 1024px) {
+		.contact--fixedIcon {
+			bottom: 20px;
+			right: 20px;
+		}
+	}
 `;
 
 export default ContactFloatIcon;

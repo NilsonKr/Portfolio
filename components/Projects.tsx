@@ -1,13 +1,12 @@
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
-
 import ProjectCard from './ProjectCard';
 import GithubIcon from './SVGIcons/github';
 
 import { ProjectsStyled } from '../styles/styledComponents/Projects';
 
-const Projects = ({ projectsData }: { projectsData: TProjects[] }) => {
-	const theme = useContext(ThemeContext);
+type props = { projectsData: TProjects[]; theme: Ttheme };
+
+const Projects = ({ projectsData, theme }: props) => {
+	const themeStyle = theme.background === '#fff' ? 'ligth' : 'dark';
 
 	return (
 		<ProjectsStyled>
@@ -30,6 +29,7 @@ const Projects = ({ projectsData }: { projectsData: TProjects[] }) => {
 							isSecondary={project.isSecondary}
 							position={index + 1}
 							iconColor={theme.textMain}
+							themeStyle={themeStyle}
 						/>
 					);
 				})}

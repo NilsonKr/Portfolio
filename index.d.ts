@@ -4,8 +4,7 @@ type TImage = {
 };
 
 type TtechIcons = {
-	ligth: Array<string>;
-	dark: Array<string>;
+	[key: string]: Array<string>;
 };
 
 interface TLanding {

@@ -1,9 +1,11 @@
 import ContactForm from './Form';
 import ContactFigure from './figures/ContactFigure';
 
+import { ContactStyled } from '../styles/styledComponents/Contact';
+
 const Contact = ({ extras }: { extras: TExtras }) => {
 	return (
-		<section className='contact__section' id='contact'>
+		<ContactStyled id='contact'>
 			<div className='form__section'>
 				<h1 className='contact--title'>Get In Touch 📬</h1>
 				<p className='contact--subtitle'>Let’s create web stuff together !</p>
@@ -16,7 +18,7 @@ const Contact = ({ extras }: { extras: TExtras }) => {
 					<p>nilson444diaz@gmail.com</p>
 				</div>
 			</section>
-		</section>
+		</ContactStyled>
 	);
 };
 

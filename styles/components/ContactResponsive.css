@@ -16,22 +16,14 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.contact__section {
-		margin-top: 150px;
-		grid-template-columns: repeat(2, 1fr);
-	}
 	.contact__socialHub {
 		align-self: center;
 	}
 }
 
 @media screen and (min-width: 1444px) {
-	.contact__section {
+	.form__section {
 		width: 80%;
-		margin: 150px auto 0;
-	}
-
-	.contact--title {
-		font-size: 45px;
+		justify-self: end;
 	}
 }

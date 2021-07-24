@@ -1,20 +1,3 @@
-.contact__section {
-	display: grid;
-	margin-top: 70px;
-}
-
-.contact--title {
-	font-size: 35px;
-	font-family: var(--main-font);
-	text-align: center;
-}
-
-.contact--subtitle {
-	font-size: 24px;
-	color: var(--text-ligth-second);
-	text-align: center;
-}
-
 .contact__form {
 	width: 80%;
 	margin: 30px auto 0;
@@ -28,13 +11,6 @@
 	display: block;
 	margin: 15px 0;
 	width: 100%;
-}
-
-.contact--field p {
-	font-family: var(--main-font);
-	font-weight: 800;
-	font-size: 22px;
-	margin-bottom: 10px;
 }
 
 .contact--field input,
@@ -121,23 +97,4 @@
 .contact--github {
 	grid-row: 4 / span 1;
 	grid-column: 3 / span 1;
-}
-
-.contact--gmail {
-	margin-top: 20px;
-	padding-left: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.contact--gmail p {
-	margin-left: 10px;
-	color: var(--text-ligth-main);
-	font-size: 18px;
-}
-
-.contact--gmail img {
-	height: 25px;
-	width: 35px;
 }
