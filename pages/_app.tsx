@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import { ThemeProvider } from 'styled-components';
 
 import '../styles/global.css';
 import '../styles/components/Header.css';
@@ -12,8 +13,25 @@ import '../styles/components/ProjectsResponsive.css';
 import '../styles/components/Contact.css';
 import '../styles/components/ContactResponsive.css';
 
+const theme = {
+	ligth: {
+		background: '#fff',
+		textMain: '#000',
+		textSecond: '#9e9e9e',
+	},
+	dark: {
+		background: '#1d1d1d',
+		textMain: '#fff',
+		textSecond: '#cfcfcfcf',
+	},
+};
+
 function MyApp({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+	return (
+		<ThemeProvider theme={theme['ligth']}>
+			<Component {...pageProps} />
+		</ThemeProvider>
+	);
 }
 
 export default MyApp;

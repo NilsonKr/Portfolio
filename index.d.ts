@@ -46,3 +46,9 @@ type TAPIResponse = {
 	record: TAPIResponse;
 	metadata: any;
 };
+
+type Ttheme = {
+	background: string;
+	textMain: string;
+	textSecond: string;
+};

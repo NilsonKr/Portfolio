@@ -1,5 +1,4 @@
 import LandingTechHub from './figures/LandingTechHub';
-import EnvelopeIcon from './SVGIcons/envelope';
 
 const Landing = ({ landingData }: { landingData: TLanding }) => {
 	return (
@@ -26,11 +25,6 @@ const Landing = ({ landingData }: { landingData: TLanding }) => {
 				</div>
 			</div>
 			<LandingTechHub image={landingData.figure.X1} />
-			<div className='contact--fixedIcon'>
-				<a href='#contact'>
-					<EnvelopeIcon size='30' />
-				</a>
-			</div>
 		</section>
 	);
 };

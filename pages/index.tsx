@@ -1,4 +1,5 @@
-// import {  useState } from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 // import { GetStaticProps } from 'next';
 import landingData from '../data/landing';
 import projectsData from '../data/projects';
@@ -9,6 +10,9 @@ import Landing from '@components/Landing';
 import Projects from '@components/Projects';
 import Contact from '@components/Contact';
 import Footer from '@components/Footer';
+
+import EnvelopeIcon from '@components/SVGIcons/envelope';
+import ContactFloatIcon from '../styles/styledComponents/ContactFloatIcon';
 
 // export const getStaticProps: GetStaticProps = async () => {
 // 	//Fetch Portfolio Data
@@ -35,10 +39,17 @@ import Footer from '@components/Footer';
 //{ data }: { data: TDataFormat }
 
 const Home = () => {
+	const themeContext = useContext<Ttheme>(ThemeContext);
+
 	return (
 		<>
 			<Header />
 			<Landing landingData={landingData} />
+			<ContactFloatIcon>
+				<a href='#contact'>
+					<EnvelopeIcon size='30' color={themeContext.background} />
+				</a>
+			</ContactFloatIcon>
 			<Projects projectsData={projectsData} />
 			<Contact extras={extras} />
 			<Footer image={extras.footer.X1} />
