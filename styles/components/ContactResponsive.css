@@ -1,0 +1,37 @@
+@media screen and (min-width: 720px) {
+	.contact--socialMedia {
+		grid-template-columns: repeat(5, 80px);
+		grid-template-rows: repeat(5, 80px);
+	}
+
+	.contact--socialMedia img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.contact--socialMedia .glass--wrapper {
+		height: 70px;
+		width: 70px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.contact__section {
+		margin-top: 150px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.contact__socialHub {
+		align-self: center;
+	}
+}
+
+@media screen and (min-width: 1444px) {
+	.contact__section {
+		width: 80%;
+		margin: 150px auto 0;
+	}
+
+	.contact--title {
+		font-size: 45px;
+	}
+}

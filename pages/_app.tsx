@@ -10,6 +10,7 @@ import '../styles/components/LandingResponsive.css';
 import '../styles/components/Projects.css';
 import '../styles/components/ProjectsResponsive.css';
 import '../styles/components/Contact.css';
+import '../styles/components/ContactResponsive.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return <Component {...pageProps} />;

@@ -3,7 +3,7 @@ import React from 'react';
 const ContactFigure = ({ image }: { image: string }) => {
 	return (
 		<div className='contact__social'>
-			<img src={image} alt='Social Media' />
+			<img src={image} alt='Social Media' className='contact--figure' />
 			<div className='contact--socialMedia '>
 				<a
 					target='_blank'

@@ -79,8 +79,8 @@
 	text-align: center;
 }
 
-.contact__social img {
-	width: clamp(320px, 100%, 500px);
+.contact--figure {
+	width: clamp(320px, 100%, 450px);
 	min-height: 400px;
 	height: 100%;
 	max-height: 500px;
