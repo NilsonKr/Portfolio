@@ -5,7 +5,7 @@ import HeaderMobile from './HeaderMobile';
 import HeaderDesktop from './HeaderDesktop';
 
 const Header = () => {
-	const [isMobile] = useMediaQuery(1024, 'width');
+	const [isDesktop] = useMediaQuery(1024, 'width');
 	const [isOpen, openHeader] = useState<boolean>(false);
 
 	const handleOpenMobile = () => {
@@ -14,7 +14,7 @@ const Header = () => {
 
 	return (
 		<header>
-			{isMobile ? (
+			{isDesktop ? (
 				<HeaderDesktop />
 			) : (
 				<HeaderMobile isOpen={isOpen} setOpen={handleOpenMobile} />

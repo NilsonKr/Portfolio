@@ -84,7 +84,7 @@
 	}
 	.project {
 		padding: 0 50px;
-		grid-template-columns: 1fr 1.5fr;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	.project__pictures img {
