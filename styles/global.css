@@ -16,6 +16,10 @@
 	--secondary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: var(--secondary-font);
 }
@@ -39,6 +43,22 @@ body {
 ::selection {
 	background-color: aquamarine;
 	color: var(--text-ligth-main);
+}
+
+.contact--fixedIcon {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+	border-radius: 50%;
+	background-color: var(--text-ligth-main);
+}
+
+.contact--fixedIcon {
+	line-height: 0;
 }
 
 .footer__container {
@@ -67,5 +87,9 @@ body {
 	}
 	.footer__container p {
 		font-size: 18px;
+	}
+	.contact--fixedIcon {
+		bottom: 20px;
+		right: 20px;
 	}
 }

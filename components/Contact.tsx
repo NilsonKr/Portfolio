@@ -3,7 +3,7 @@ import ContactFigure from './figures/ContactFigure';
 
 const Contact = ({ extras }: { extras: TExtras }) => {
 	return (
-		<section className='contact__section'>
+		<section className='contact__section' id='contact'>
 			<div className='form__section'>
 				<h1 className='contact--title'>Get In Touch 📬</h1>
 				<p className='contact--subtitle'>Let’s create web stuff together !</p>

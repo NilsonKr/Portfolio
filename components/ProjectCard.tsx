@@ -40,19 +40,15 @@ const ProjectCard = ({ project, inverted, isSecondary, position }: Props) => {
 					})}
 				</div>
 				<div className='project--links'>
-					<div className='project--repo'>
+					<a className='project--repo' target='_blank' href={project.social.github}>
 						<GithubIcon size={'25'} />
-						<a target='_blank' href={project.social.github}>
-							Repository
-						</a>
-					</div>
+						<span>Repository</span>
+					</a>
 					{project.social.web && (
-						<div className='project--web'>
+						<a className='project--web' target='_blank' href={project.social.web}>
 							<WebIcon size={'25'} />
-							<a target='_blank' href={project.social.web}>
-								{project.social.web}
-							</a>
-						</div>
+							<span>{project.social.web}</span>
+						</a>
 					)}
 				</div>
 			</div>

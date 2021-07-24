@@ -68,20 +68,20 @@
 	margin-top: 20px;
 }
 
-.project--links div {
+.project--links a {
 	display: flex;
+	text-decoration: none;
 	align-items: center;
 	margin-top: 10px;
 }
 
-.project--repo a {
-	text-decoration: none;
+.project--repo span {
 	color: var(--text-ligth-second);
 	font-weight: 500;
 	margin-left: 5px;
 }
 
-.project--web a {
+.project--web span {
 	text-decoration: none;
 	color: var(--special-color);
 	margin-left: 5px;
