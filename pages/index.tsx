@@ -5,6 +5,7 @@ import landingData from '../data/landing';
 import projectsData from '../data/projects';
 import extras from '../data/extras';
 
+import ProgressScrollBar from '@components/ProgressScrollBar';
 import Header from '@components/Header';
 import Landing from '@components/Landing';
 import Projects from '@components/Projects';
@@ -45,6 +46,7 @@ const Home = () => {
 
 	return (
 		<>
+			<ProgressScrollBar />
 			<Header />
 			<Landing landingData={landingData} />
 			<ContactFloatIcon>
