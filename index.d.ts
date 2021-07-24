@@ -52,3 +52,8 @@ type Ttheme = {
 	textMain: string;
 	textSecond: string;
 };
+
+type TIconProps = {
+	size: string;
+	color: string;
+};

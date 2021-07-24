@@ -1,13 +1,18 @@
 import React from 'react';
 
-const SwitchTheme = () => {
+import Moon from './SVGIcons/moon';
+import Sun from './SVGIcons/sun';
+
+import SwitchPointer from 'styles/styledComponents/SwitchTheme';
+
+const SwitchTheme = ({ iconColor }: { iconColor: string }) => {
 	return (
 		<label className='theme__handler'>
 			<input type='checkbox' />
-			<span className='theme--pointer'></span>
+			<SwitchPointer className='theme--pointer'></SwitchPointer>
 			<div className='theme--options'>
-				<img src='/images/Sun.svg' alt='Ligth Mode' />
-				<img src='/images/Moon.svg' alt='Dark Mode' />
+				<Sun color={iconColor} size='25' />
+				<Moon color={iconColor} size='25' />
 			</div>
 		</label>
 	);

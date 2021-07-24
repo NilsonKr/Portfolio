@@ -2,12 +2,20 @@ import { useState, useRef, useEffect } from 'react';
 
 import SwitchTheme from './SwitchTheme';
 
+import {
+	HeaderMobileStyled,
+	HeaderMobileItems,
+} from '../styles/styledComponents/HeaderMobile';
+
+import { NavbarList } from '../styles/styledComponents/Header';
+
 type MobileProps = {
 	isOpen: boolean;
 	setOpen: () => void;
+	theme: Ttheme;
 };
 
-const HeaderMobile = ({ isOpen, setOpen }: MobileProps) => {
+const HeaderMobile = ({ isOpen, setOpen, theme }: MobileProps) => {
 	//Handle Mobile Behaviour
 	const [isSticky, setSticky] = useState<boolean>(false);
 	const trackElement = useRef<HTMLElement>(null);
@@ -36,9 +44,11 @@ const HeaderMobile = ({ isOpen, setOpen }: MobileProps) => {
 					src='/images/LigthLogo.svg'
 					alt='Nilson Diaz Logo'
 				/>
-				<SwitchTheme />
+				<SwitchTheme iconColor={theme.textMain} />
 			</section>
-			<section className={`navbar__mobile ${isSticky && 'navbar__mobile--sticky'}`}>
+			<HeaderMobileStyled
+				className={`navbar__mobile ${isSticky && 'navbar__mobile--sticky'}`}
+			>
 				<div className={`navbar__open--symbol `} onClick={setOpen}>
 					<div
 						className={`navbar__open--line ${isOpen ? 'close--line1' : 'open--line1'}`}
@@ -47,10 +57,10 @@ const HeaderMobile = ({ isOpen, setOpen }: MobileProps) => {
 						className={`navbar__open--line  ${isOpen ? 'close--line2' : 'open--line2'}`}
 					></div>
 				</div>
-				<nav
+				<HeaderMobileItems
 					className={`navbar navbar__mobile--items ${isOpen && 'open--items__mobile'} `}
 				>
-					<ul>
+					<NavbarList>
 						<li>
 							<a href='#landing'>Home</a>
 						</li>
@@ -60,9 +70,9 @@ const HeaderMobile = ({ isOpen, setOpen }: MobileProps) => {
 						<li>
 							<a href='#contact'>Contact</a>
 						</li>
-					</ul>
-				</nav>
-			</section>
+					</NavbarList>
+				</HeaderMobileItems>
+			</HeaderMobileStyled>
 		</>
 	);
 };

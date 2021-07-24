@@ -16,10 +16,3 @@
 .navbar__desktop--items {
 	margin-right: 25px;
 }
-
-.navbar__desktop--items li {
-	display: inline-block;
-	margin: 0 20px;
-	font-size: 30px;
-	font-weight: 600;
-}

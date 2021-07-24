@@ -2,7 +2,6 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
 import '../styles/global.css';
-import '../styles/components/Header.css';
 import '../styles/components/HeaderMobile.css';
 import '../styles/components/HeaderDesktop.css';
 import '../styles/components/SwitchTheme.css';
@@ -28,7 +27,7 @@ const theme = {
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<ThemeProvider theme={theme['ligth']}>
+		<ThemeProvider theme={theme['dark']}>
 			<Component {...pageProps} />
 		</ThemeProvider>
 	);

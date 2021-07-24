@@ -1,4 +1,4 @@
-const envelope = ({ size, color }: { size: string; color: string }) => {
+const envelope = ({ size, color }: TIconProps) => {
 	return (
 		<svg
 			width={size}

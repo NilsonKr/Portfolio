@@ -2,7 +2,9 @@ import React from 'react';
 
 import SwitchTheme from './SwitchTheme';
 
-const HeaderDesktop = () => {
+import { NavbarList } from '../styles/styledComponents/Header';
+
+const HeaderDesktop = ({ theme }: { theme: Ttheme }) => {
 	return (
 		<>
 			<section className='header__desktop'>
@@ -13,7 +15,7 @@ const HeaderDesktop = () => {
 				/>
 				<div className='navbar__desktop'>
 					<nav className='navbar navbar__desktop--items'>
-						<ul>
+						<NavbarList>
 							<li>
 								<a href='#landing'>Home</a>
 							</li>
@@ -23,9 +25,9 @@ const HeaderDesktop = () => {
 							<li>
 								<a href='#contact'>Contact</a>
 							</li>
-						</ul>
+						</NavbarList>
 					</nav>
-					<SwitchTheme />
+					<SwitchTheme iconColor={theme.textMain} />
 				</div>
 			</section>
 		</>

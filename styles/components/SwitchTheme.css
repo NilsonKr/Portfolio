@@ -27,19 +27,6 @@
 	height: 0;
 }
 
-.theme--pointer {
-	position: absolute;
-	left: 10px;
-	top: 5px;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background-color: var(--text-dark-main);
-	box-shadow: -2px -2px 6px rgba(214, 214, 214, 0.5), 2px 2px 6px rgba(139, 139, 139, 0.5);
-	transition: transform 1s;
-	z-index: 2;
-}
-
 .theme__handler input:checked + .theme--pointer {
 	transform: translateX(50px);
 }
