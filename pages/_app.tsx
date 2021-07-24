@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
@@ -17,18 +18,35 @@ const theme = {
 		background: '#fff',
 		textMain: '#000',
 		textSecond: '#9e9e9e',
+		current: 'ligth',
 	},
 	dark: {
 		background: '#1d1d1d',
 		textMain: '#fff',
 		textSecond: '#cfcfcfcf',
+		current: 'dark',
 	},
 };
 
+//Expose HandleSwitchTheme function to any components
+export const changeThemeContext = React.createContext<TchangeTheme | null>(null);
+
 function MyApp({ Component, pageProps }: AppProps) {
+	const [style, setStyle] = useState<TthemeStyles>('dark');
+
+	const handleSwitchTheme = () => {
+		if (style === 'ligth') {
+			setStyle('dark');
+		} else {
+			setStyle('ligth');
+		}
+	};
+
 	return (
-		<ThemeProvider theme={theme['dark']}>
-			<Component {...pageProps} />
+		<ThemeProvider theme={theme[style]}>
+			<changeThemeContext.Provider value={{ handleSwitchTheme }}>
+				<Component {...pageProps} />
+			</changeThemeContext.Provider>
 		</ThemeProvider>
 	);
 }

@@ -5,8 +5,7 @@ import LandingTechHub from './figures/LandingTechHub';
 import { DescriptionStyled, LandingStyled } from '../styles/styledComponents/Landing';
 
 const Landing = ({ landingData }: { landingData: TLanding }) => {
-	const theme = useContext(ThemeContext);
-	const figureTheme = theme.background === '#fff' ? 'ligth' : 'dark';
+	const theme = useContext<Ttheme>(ThemeContext);
 
 	return (
 		<LandingStyled id='landing'>
@@ -31,7 +30,7 @@ const Landing = ({ landingData }: { landingData: TLanding }) => {
 					<img src={landingData.projects.third.X1} alt='Third Project Thumbnail' />
 				</div>
 			</div>
-			<LandingTechHub image={landingData.figure[figureTheme].X1} />
+			<LandingTechHub image={landingData.figure[theme.current].X1} />
 		</LandingStyled>
 	);
 };

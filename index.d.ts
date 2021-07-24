@@ -48,11 +48,17 @@ type TAPIResponse = {
 	record: TAPIResponse;
 	metadata: any;
 };
+type TthemeStyles = 'ligth' | 'dark';
 
 type Ttheme = {
 	background: string;
 	textMain: string;
 	textSecond: string;
+	current: TthemeStyles;
+};
+
+type TchangeTheme = {
+	handleSwitchTheme: () => void;
 };
 
 type TIconProps = {

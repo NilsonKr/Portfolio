@@ -36,7 +36,9 @@ import ContactFloatIcon from '../styles/styledComponents/ContactFloatIcon';
 // 	}
 // };
 
-//{ data }: { data: TDataFormat }
+type props = {
+	data?: TDataFormat;
+};
 
 const Home = () => {
 	const themeContext = useContext<Ttheme>(ThemeContext);

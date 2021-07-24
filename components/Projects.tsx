@@ -6,8 +6,6 @@ import { ProjectsStyled } from '../styles/styledComponents/Projects';
 type props = { projectsData: TProjects[]; theme: Ttheme };
 
 const Projects = ({ projectsData, theme }: props) => {
-	const themeStyle = theme.background === '#fff' ? 'ligth' : 'dark';
-
 	return (
 		<ProjectsStyled>
 			<div className='projects--header'>
@@ -29,7 +27,7 @@ const Projects = ({ projectsData, theme }: props) => {
 							isSecondary={project.isSecondary}
 							position={index + 1}
 							iconColor={theme.textMain}
-							themeStyle={themeStyle}
+							themeStyle={theme.current}
 						/>
 					);
 				})}
