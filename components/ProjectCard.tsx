@@ -3,27 +3,30 @@ import React from 'react';
 import GithubIcon from './SVGIcons/github';
 import WebIcon from './SVGIcons/web';
 
+import { DescriptionStyled, LinksStyled } from '../styles/styledComponents/Projects';
+
 type Props = {
 	project: TProjects;
 	inverted: boolean;
 	isSecondary?: boolean;
 	position: number;
+	iconColor: string;
 };
 
-const ProjectCard = ({ project, inverted, isSecondary, position }: Props) => {
+const ProjectCard = ({ project, inverted, isSecondary, position, iconColor }: Props) => {
 	return (
 		<div
 			className={`project ${inverted && 'inverted'} ${
 				isSecondary ? `secondary-${position}` : `main-${position}`
 			}`}
 		>
-			<div className='project__description'>
+			<DescriptionStyled>
 				<h2 className='project--title'>
 					{project.title}
 					<span>{project.complement}</span>
 				</h2>
 				<p>{project.description}</p>
-			</div>
+			</DescriptionStyled>
 			<div className='project__stack'>
 				<div className='project--tech'>
 					{project.technologies.ligth.map(icon => {
@@ -39,18 +42,18 @@ const ProjectCard = ({ project, inverted, isSecondary, position }: Props) => {
 						);
 					})}
 				</div>
-				<div className='project--links'>
+				<LinksStyled>
 					<a className='project--repo' target='_blank' href={project.social.github}>
-						<GithubIcon size={'25'} />
+						<GithubIcon size={'25'} color={iconColor} />
 						<span>Repository</span>
 					</a>
 					{project.social.web && (
 						<a className='project--web' target='_blank' href={project.social.web}>
-							<WebIcon size={'25'} />
+							<WebIcon size={'25'} color={iconColor} />
 							<span>{project.social.web}</span>
 						</a>
 					)}
-				</div>
+				</LinksStyled>
 			</div>
 			<div className='project__pictures'>
 				<img

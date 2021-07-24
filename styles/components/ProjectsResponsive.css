@@ -19,15 +19,7 @@
 			'pictures description'
 			'pictures stack';
 	}
-	.project__description {
-		width: 80%;
-	}
-	.project--title {
-		font-size: 40px;
-	}
-	.project__description p {
-		font-size: 22px;
-	}
+
 	.project__stack {
 		width: 80%;
 	}
@@ -75,9 +67,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-	.projects--header a {
-		font-size: 55px;
-	}
 	.projects__list {
 		width: 90%;
 		margin: 100px auto 0;

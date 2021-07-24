@@ -39,26 +39,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.landing {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas:
-			'description  techhub'
-			'thumbnails  techhub';
-		margin-top: 40px;
-	}
-	.landing__description {
-		width: 100%;
-		text-align: start;
-		place-self: end;
-		padding-left: 100px;
-	}
-	.desc--work {
-		font-size: 24px;
-	}
-	.landing__description p {
-		font-size: 18px;
-	}
-
 	.landing__technologies {
 		justify-self: end;
 		width: clamp(320px, 100%, 1000px);
@@ -67,18 +47,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-	.landing {
-		margin-top: 0;
-	}
-	.landing__description {
-		width: 85%;
-	}
-	.desc--greeting {
-		font-size: 38px;
-	}
-	.desc--name {
-		font-size: 50px;
-	}
 	.glass--wrapper {
 		padding: 10px;
 		width: 80px;

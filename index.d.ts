@@ -14,7 +14,10 @@ interface TLanding {
 		second: TImage;
 		third: TImage;
 	};
-	figure: TImage;
+	figure: {
+		ligth: TImage;
+		dark: TImage;
+	};
 }
 
 interface TExtras {

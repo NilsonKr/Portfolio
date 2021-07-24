@@ -1,15 +1,20 @@
-import React from 'react';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 import ProjectCard from './ProjectCard';
 import GithubIcon from './SVGIcons/github';
 
+import { ProjectsStyled } from '../styles/styledComponents/Projects';
+
 const Projects = ({ projectsData }: { projectsData: TProjects[] }) => {
+	const theme = useContext(ThemeContext);
+
 	return (
-		<section className='projects__container'>
+		<ProjectsStyled>
 			<div className='projects--header'>
 				<a target='_blank' href='https://github.com/NilsonKr'>
 					My Pr
-					<GithubIcon size='40' />
+					<GithubIcon size='40' color={theme.textMain} />
 					jects
 				</a>
 			</div>
@@ -24,11 +29,12 @@ const Projects = ({ projectsData }: { projectsData: TProjects[] }) => {
 							inverted={isInverted}
 							isSecondary={project.isSecondary}
 							position={index + 1}
+							iconColor={theme.textMain}
 						/>
 					);
 				})}
 			</section>
-		</section>
+		</ProjectsStyled>
 	);
 };
 
