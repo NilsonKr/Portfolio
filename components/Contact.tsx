@@ -1,35 +1,21 @@
-import React from 'react';
+import ContactForm from './Form';
+import ContactFigure from './figures/ContactFigure';
 
-const Contact = () => {
+const Contact = ({ extras }: { extras: TExtras }) => {
 	return (
 		<section className='contact__section'>
 			<div className='form__section'>
 				<h1 className='contact--title'>Get In Touch 📬</h1>
 				<p className='contact--subtitle'>Let’s create web stuff together !</p>
-				<form
-					className='contact__form'
-					onSubmit={ev => {
-						ev.preventDefault();
-						console.log('New Email!');
-					}}
-				>
-					<label className='contact--field'>
-						<p>Name</p>
-						<input type='text' name='name' placeholder='Your Name' />
-					</label>
-					<label className='contact--field'>
-						<p>E-mail</p>
-						<input type='text' name='email' placeholder='someone@gmail.com' />
-					</label>
-					<label className='contact--field contact--message'>
-						<p>Message</p>
-						<textarea name='message' id=''></textarea>
-					</label>
-					<button className='contact--submit' type='submit'>
-						<img src='/images/send.svg' alt='Send Email' />
-					</button>
-				</form>
+				<ContactForm />
 			</div>
+			<section className='contact__socialHub'>
+				<ContactFigure image={extras.contact.X1} />
+				<div className='contact--gmail'>
+					<img src='/images/gmail.svg' alt='Gmail Inbox' title='Gmail Inbox' />
+					<p>nilson444diaz@gmail.com</p>
+				</div>
+			</section>
 		</section>
 	);
 };

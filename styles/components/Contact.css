@@ -72,3 +72,71 @@
 	width: 35px;
 	height: 35px;
 }
+
+.contact__social {
+	position: relative;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.contact__social img {
+	width: clamp(320px, 100%, 500px);
+	min-height: 400px;
+	height: 100%;
+	max-height: 500px;
+}
+
+.contact--socialMedia {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 60px);
+	grid-template-rows: repeat(5, 60px);
+	place-content: center;
+}
+
+.contact--socialMedia img {
+	width: 40px;
+	height: 40px;
+}
+
+.contact--socialMedia .glass--wrapper {
+	height: 60px;
+	width: 60px;
+}
+
+.contact--linkedin {
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.contact--twitter {
+	grid-row: 2 / span 1;
+	grid-column: 4 / span 1;
+}
+
+.contact--github {
+	grid-row: 4 / span 1;
+	grid-column: 3 / span 1;
+}
+
+.contact--gmail {
+	margin-top: 20px;
+	padding-left: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact--gmail p {
+	margin-left: 10px;
+	color: var(--text-ligth-main);
+	font-size: 18px;
+}
+
+.contact--gmail img {
+	height: 25px;
+	width: 35px;
+}

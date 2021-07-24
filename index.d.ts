@@ -17,6 +17,11 @@ interface TLanding {
 	figure: TImage;
 }
 
+interface TExtras {
+	contact: TImage;
+	footer: TImage;
+}
+
 interface TProjects {
 	id: string;
 	title: string;
@@ -34,6 +39,7 @@ interface TProjects {
 type TDataFormat = {
 	landing: TLanding;
 	projects: TProjects;
+	extras: TExtras;
 };
 
 type TAPIResponse = {

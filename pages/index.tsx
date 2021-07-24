@@ -2,6 +2,7 @@
 // import { GetStaticProps } from 'next';
 import landingData from '../data/landing';
 import projectsData from '../data/projects';
+import extras from '../data/extras';
 
 import Header from '@components/Header';
 import Landing from '@components/Landing';
@@ -38,7 +39,7 @@ const Home = () => {
 			<Header />
 			<Landing landingData={landingData} />
 			<Projects projectsData={projectsData} />
-			<Contact />
+			<Contact extras={extras} />
 		</>
 	);
 };

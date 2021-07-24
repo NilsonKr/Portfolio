@@ -1,3 +1,5 @@
+import LandingTechHub from './figures/LandingTechHub';
+
 const Landing = ({ landingData }: { landingData: TLanding }) => {
 	return (
 		<section className='landing' id='landing'>
@@ -22,33 +24,7 @@ const Landing = ({ landingData }: { landingData: TLanding }) => {
 					<img src={landingData.projects.third.X1} alt='Third Project Thumbnail' />
 				</div>
 			</div>
-			<div className='landing__technologies'>
-				<img
-					className='landing--figure'
-					src={landingData.figure.X1}
-					alt='Technologies Hub'
-				/>
-				<div className='landing__techhub'>
-					<div className='glass--wrapper techhub--javascript'>
-						<img className='' src='/images/javascript.svg' alt='Javascript' />
-					</div>
-					<div className='glass--wrapper techhub--react'>
-						<img className='' src='/images/react.svg' alt='React' />
-					</div>
-					<div className='glass--wrapper techhub--node'>
-						<img className='' src='/images/nodejs.svg' alt='Node js' />
-					</div>
-					<div className='glass--wrapper techhub--css'>
-						<img className='' src='/images/css.svg' alt='Css' />
-					</div>
-					<div className='glass--wrapper techhub--next'>
-						<img className='' src='/images/nextjs.svg' alt='Next js' />
-					</div>
-					<div className='glass--wrapper techhub--redux'>
-						<img className='' src='/images/redux.svg' alt='Redux' />
-					</div>
-				</div>
-			</div>
+			<LandingTechHub image={landingData.figure.X1} />
 		</section>
 	);
 };
