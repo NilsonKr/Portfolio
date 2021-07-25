@@ -21,6 +21,7 @@
 	border-radius: 5px;
 	outline: none;
 	border: 2px solid var(--text-ligth-main);
+	font-family: var(--secondary-font);
 	width: 100%;
 	transition: box-shadow 0.6s;
 }

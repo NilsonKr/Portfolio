@@ -65,3 +65,10 @@ type TIconProps = {
 	size: string;
 	color: string;
 };
+
+type TemailInfo = {
+	name: string;
+	subject: string;
+	email: string;
+	message: string;
+};

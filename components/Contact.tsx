@@ -4,7 +4,7 @@ import ContactFigure from './figures/ContactFigure';
 import { ContactStyled } from '../styles/styledComponents/Contact';
 
 const Contact = ({ extras }: { extras: TExtras }) => {
-	const handleSubmission = (formFields: HTMLFormElement[]) => {
+	const handleSubmission = async (formFields: HTMLFormElement[]) => {
 		const mailInfo: { [key: string]: string } = {};
 
 		//Retriev Inputs values excluding submit button
@@ -15,7 +15,17 @@ const Contact = ({ extras }: { extras: TExtras }) => {
 			mailInfo[el.name] = el.value;
 		});
 
-		console.log(mailInfo);
+		try {
+			const sendMail = await fetch('/api/sendmail', {
+				method: 'post',
+				body: JSON.stringify(mailInfo),
+				headers: { 'Content-Type': 'application/json' },
+			});
+
+			console.log(sendMail);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	return (
