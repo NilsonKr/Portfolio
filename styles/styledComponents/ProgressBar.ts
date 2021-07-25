@@ -22,6 +22,7 @@ export const ProgressScrollStyled = styled.section<props>`
 			transparent ${p => p.scroll}%,
 			${p => p.theme.background} 0%
 		);
+		transition: background 1s;
 		z-index: 10;
 	}
 `;
