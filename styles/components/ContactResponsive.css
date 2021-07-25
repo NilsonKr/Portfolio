@@ -1,4 +1,9 @@
 @media screen and (min-width: 720px) {
+	.contact--userinfo {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 30px;
+	}
+
 	.contact--socialMedia {
 		grid-template-columns: repeat(5, 80px);
 		grid-template-rows: repeat(5, 80px);

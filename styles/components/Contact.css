@@ -25,6 +25,11 @@
 	transition: box-shadow 0.6s;
 }
 
+.contact--userinfo {
+	width: 100%;
+	display: grid;
+}
+
 .contact--message textarea {
 	min-height: 150px;
 }

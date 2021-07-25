@@ -11,13 +11,12 @@ const ProgressScrollBar = () => {
 
 		const scrollPorcent = (scrollDown / totalHeigth) * 100;
 
-		console.log('Event');
-
 		if (scrollPorcent > scroll) {
 			setScroll(scrollPorcent);
 		}
 	};
 
+	//Update Scroll Porcent listen the event
 	useEffect(() => {
 		if (scroll < 100) {
 			window.addEventListener('scroll', handleScroll);
