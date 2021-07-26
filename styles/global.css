@@ -44,3 +44,11 @@ body {
 	background-color: aquamarine;
 	color: var(--text-ligth-main);
 }
+
+.error--message {
+	width: 100%;
+	text-align: center;
+	color: rgb(255, 81, 81);
+	font-size: 20px;
+	font-family: var(--main-font);
+}

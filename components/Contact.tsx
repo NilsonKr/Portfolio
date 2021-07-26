@@ -1,30 +1,46 @@
+import { useState } from 'react';
+import validateForm from 'utils/validateForm';
+
 import ContactForm from './Form';
-import ContactFigure from './figures/ContactFigure';
 
 import { ContactStyled } from '../styles/styledComponents/Contact';
+import ContactFigure from './figures/ContactFigure';
 
 const Contact = ({ extras }: { extras: TExtras }) => {
-	const handleSubmission = async (formFields: HTMLFormElement[]) => {
-		const mailInfo: { [key: string]: string } = {};
+	const [status, setStatus] = useState<TStatus>({ error: null, loading: false });
 
-		//Retriev Inputs values excluding submit button
-		formFields.forEach(el => {
-			if (el.type === 'submit') {
-				return;
-			}
-			mailInfo[el.name] = el.value;
-		});
+	const sendEmail = async (formInfo: TemailInfo) => {
+		setStatus({ error: null, loading: true });
+		const isFormValid = validateForm(formInfo);
 
-		try {
-			const sendMail = await fetch('/api/sendmail', {
-				method: 'post',
-				body: JSON.stringify(mailInfo),
-				headers: { 'Content-Type': 'application/json' },
+		//Validate Fields for then send email request
+		if (isFormValid.isValid === false) {
+			setStatus({
+				error: isFormValid.message,
+				loading: false,
 			});
 
-			console.log(sendMail);
-		} catch (error) {
-			console.log(error);
+			return { error: true };
+		} else {
+			try {
+				const emailResponse = await window.fetch('/api/sendmail', {
+					method: 'post',
+					body: JSON.stringify(formInfo),
+					headers: { 'Content-Type': 'application/json' },
+				});
+
+				const data = await emailResponse.json();
+
+				setStatus({ error: null, loading: false });
+				return data;
+			} catch (error) {
+				console.log(error);
+				setStatus({
+					error: 'Oh oh Something went wrong , Try again in a few Moments :( ',
+					loading: false,
+				});
+				return { error: true };
+			}
 		}
 	};
 
@@ -33,7 +49,7 @@ const Contact = ({ extras }: { extras: TExtras }) => {
 			<div className='form__section'>
 				<h1 className='contact--title'>Get In Touch 📬</h1>
 				<p className='contact--subtitle'>Let’s create web stuff together !</p>
-				<ContactForm handleSubmit={handleSubmission} />
+				<ContactForm handleSendEmail={sendEmail} dataStatus={status} />
 			</div>
 			<section className='contact__socialHub'>
 				<ContactFigure image={extras.contact.X1} />

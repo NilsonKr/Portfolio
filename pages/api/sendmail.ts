@@ -16,7 +16,7 @@ const mailHandler: NextApiHandler = async (req, res) => {
 		try {
 			await transportMail.sendMail(formatMail);
 
-			res.status(205).json({ error: null, result: 'Email Sendend!' });
+			res.status(200).json({ error: null, result: 'Email Sendend!' });
 		} catch (error) {
 			console.log(error);
 			res.end();

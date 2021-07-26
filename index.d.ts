@@ -72,3 +72,5 @@ type TemailInfo = {
 	email: string;
 	message: string;
 };
+
+type TStatus = { error: null | string; loading: boolean };

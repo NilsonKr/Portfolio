@@ -12,6 +12,7 @@ import '../styles/components/Projects.css';
 import '../styles/components/ProjectsResponsive.css';
 import '../styles/components/Contact.css';
 import '../styles/components/ContactResponsive.css';
+import '../styles/components/Loader.css';
 
 const theme = {
 	ligth: {
