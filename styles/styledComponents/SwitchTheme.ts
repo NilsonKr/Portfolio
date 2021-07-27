@@ -15,7 +15,7 @@ const SwitchPointer = styled.span`
 	background-color: ${p =>
 		p.theme.background === '#1d1d1d' ? '#000' : p.theme.background};
 	box-shadow: ${p => (p.theme.background === '#1d1d1d' ? shadows.dark : shadows.ligth)};
-	transition: transform 1s;
+	/* transition: transform 1s; */
 	z-index: 2;
 	cursor: pointer;
 `;

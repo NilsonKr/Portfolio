@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
 import '../styles/global.css';
+import '../styles/animations.css';
 import '../styles/components/HeaderMobile.css';
 import '../styles/components/HeaderDesktop.css';
 import '../styles/components/SwitchTheme.css';
@@ -33,12 +34,16 @@ const theme = {
 export const changeThemeContext = React.createContext<TchangeTheme | null>(null);
 
 function MyApp({ Component, pageProps }: AppProps) {
-	const [style, setStyle] = useState<TthemeStyles>('dark');
+	const [style, setStyle] = useState<TthemeStyles>('ligth');
 
-	const handleSwitchTheme = () => {
+	const handleSwitchTheme = (pointer: HTMLElement) => {
+		console.log(pointer);
+
 		if (style === 'ligth') {
 			setStyle('dark');
+			pointer.style.animation = 'switch 1.5s forwards';
 		} else {
+			pointer.style.animation = 'inverseSwitch 1s';
 			setStyle('ligth');
 		}
 	};

@@ -58,7 +58,7 @@ type Ttheme = {
 };
 
 type TchangeTheme = {
-	handleSwitchTheme: () => void;
+	handleSwitchTheme: (pointer: HTMLElement) => void;
 };
 
 type TIconProps = {
