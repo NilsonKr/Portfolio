@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContactStyled = styled.section`
 	display: grid;
-	padding-top: 70px;
+	padding: 70px 0 40px;
 	background-color: ${p => p.theme.background};
 
 	.contact--title {

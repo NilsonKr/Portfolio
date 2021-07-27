@@ -14,9 +14,9 @@ const Landing = ({ landingData }: { landingData: TLanding }) => {
 				<h1 className='desc--name'>NILSON DIAZ</h1>
 				<h3 className='desc--work'>Web Developer / Front End</h3>
 				<p>
-					I build web applications , i like assume new Challenges to get me out of my
+					I build web applications , also i like assume new Challenges to get me out of my
 					bounds , & then be able to create interesting stuff with technology, I’m a
-					enthusiast of Frontend Development.
+					enthusiast of Web Development.
 				</p>
 			</DescriptionStyled>
 			<div className='landing__thumbnails'>

@@ -8,7 +8,7 @@ export const ProgressScrollStyled = styled.section<props>`
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 8px;
+	height: 10px;
 	background: linear-gradient(270deg, #cc00ff 0%, #41ffd1 99.69%);
 	z-index: 5;
 
@@ -16,7 +16,7 @@ export const ProgressScrollStyled = styled.section<props>`
 		position: fixed;
 		top: 0;
 		width: 100%;
-		height: 8px;
+		height: 10px;
 		background: linear-gradient(
 			to right,
 			transparent ${p => p.scroll}%,

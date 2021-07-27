@@ -7,7 +7,7 @@
 
 .navbar__mobile--sticky {
 	position: fixed;
-	top: 0;
+	top: 8px;
 	z-index: 10;
 }
 
