@@ -9,10 +9,27 @@ export const DescriptionStyled = styled.div`
 		font-size: 26px;
 	}
 	.desc--name {
-		font-size: 38px;
+		position: relative;
 		margin: 2px;
+		width: 12ch;
+		font-size: 38px;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: typing 2s steps(12);
+		/* animation-delay: 1s; */
 	}
 
+	.desc--name::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 6px;
+		height: 100%;
+		background-color: black;
+		animation: typingPointer 700ms 3 normal forwards;
+		animation-delay: 2s;
+	}
 	.desc--work {
 		font-weight: 500;
 		color: ${p => p.theme.textSecond};
