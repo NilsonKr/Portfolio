@@ -11,12 +11,12 @@ export const DescriptionStyled = styled.div`
 	.desc--name {
 		position: relative;
 		margin: 2px;
-		width: 12ch;
+		width: 0ch;
 		font-size: 38px;
 		overflow: hidden;
 		white-space: nowrap;
-		animation: typing 2s steps(12);
-		/* animation-delay: 1s; */
+		animation: typing 2s steps(12) forwards;
+		animation-delay: 0.5s;
 	}
 
 	.desc--name::after {
@@ -26,9 +26,9 @@ export const DescriptionStyled = styled.div`
 		top: 0;
 		width: 6px;
 		height: 100%;
-		background-color: black;
+		background-color: ${p => p.theme.textMain};
 		animation: typingPointer 700ms 3 normal forwards;
-		animation-delay: 2s;
+		animation-delay: 2.5s;
 	}
 	.desc--work {
 		font-weight: 500;

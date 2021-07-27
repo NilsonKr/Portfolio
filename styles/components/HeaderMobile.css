@@ -9,7 +9,7 @@
 .navbar__mobile--sticky {
 	position: fixed;
 	top: 8px;
-	z-index: 10;
+	z-index: 5;
 }
 
 .navbar__open--symbol {

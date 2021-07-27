@@ -2,12 +2,14 @@ import { useState } from 'react';
 import validateForm from 'utils/validateForm';
 
 import ContactForm from './Form';
+import EmailSuccess from './EmailSuccess';
 
 import { ContactStyled } from '../styles/styledComponents/Contact';
 import ContactFigure from './figures/ContactFigure';
 
 const Contact = ({ extras }: { extras: TExtras }) => {
 	const [status, setStatus] = useState<TStatus>({ error: null, loading: false });
+	const [isEmailSuccess, setEmailStatus] = useState<boolean>(false);
 
 	const sendEmail = async (formInfo: TemailInfo) => {
 		setStatus({ error: null, loading: true });
@@ -32,6 +34,9 @@ const Contact = ({ extras }: { extras: TExtras }) => {
 				const data = await emailResponse.json();
 
 				setStatus({ error: null, loading: false });
+				//UI Success Message
+				setEmailStatus(true);
+				setTimeout(() => setEmailStatus(false), 4500);
 				return data;
 			} catch (error) {
 				console.log(error);
@@ -45,20 +50,23 @@ const Contact = ({ extras }: { extras: TExtras }) => {
 	};
 
 	return (
-		<ContactStyled id='contact'>
-			<div className='form__section'>
-				<h1 className='contact--title'>Get In Touch 📬</h1>
-				<p className='contact--subtitle'>Let’s create web stuff together !</p>
-				<ContactForm handleSendEmail={sendEmail} dataStatus={status} />
-			</div>
-			<section className='contact__socialHub'>
-				<ContactFigure image={extras.contact.X1} />
-				<div className='contact--gmail'>
-					<img src='/images/gmail.svg' alt='Gmail Inbox' title='Gmail Inbox' />
-					<p>nilson444diaz@gmail.com</p>
+		<>
+			{isEmailSuccess && <EmailSuccess />}
+			<ContactStyled id='contact'>
+				<div className='form__section'>
+					<h1 className='contact--title'>Get In Touch 📬</h1>
+					<p className='contact--subtitle'>Let’s create web stuff together !</p>
+					<ContactForm handleSendEmail={sendEmail} dataStatus={status} />
 				</div>
-			</section>
-		</ContactStyled>
+				<section className='contact__socialHub'>
+					<ContactFigure image={extras.contact.X1} />
+					<div className='contact--gmail'>
+						<img src='/images/gmail.svg' alt='Gmail Inbox' title='Gmail Inbox' />
+						<p>nilson444diaz@gmail.com</p>
+					</div>
+				</section>
+			</ContactStyled>
+		</>
 	);
 };
 

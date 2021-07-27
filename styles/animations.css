@@ -78,3 +78,37 @@
 		opacity: 0;
 	}
 }
+
+@keyframes successEmail {
+	0% {
+		transform: translate(-50%, -70px) rotate(0);
+	}
+
+	25% {
+		transform: translate(-50%, 100px) rotate(0);
+	}
+
+	28% {
+		transform: translate(-50%, 100px) rotate(10deg);
+	}
+
+	31% {
+		transform: translate(-50%, 100px) rotate(-10deg);
+	}
+	34% {
+		transform: translate(-50%, 100px) rotate(5deg);
+	}
+	37% {
+		transform: translate(-50%, 100px) rotate(-5deg);
+	}
+	40% {
+		transform: translate(-50%, 100px) rotate(0deg);
+	}
+
+	90% {
+		transform: translate(-50%, 100px) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -70px) rotate(0);
+	}
+}
