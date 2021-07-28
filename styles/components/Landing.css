@@ -79,7 +79,7 @@
 	width: clamp(320px, 100%, 800px);
 	min-height: 300px;
 	height: 100%;
-	max-height: 500px;
+	max-height: 800px;
 }
 
 .landing--figure {

@@ -1,4 +1,4 @@
-import React from 'react';
+import Image from 'next/image';
 
 import GithubIcon from './SVGIcons/github';
 import WebIcon from './SVGIcons/web';
@@ -64,7 +64,11 @@ const ProjectCard = ({
 				</LinksStyled>
 			</div>
 			<div className='project__pictures'>
-				<img
+				<Image
+					width={500}
+					height={400}
+					blurDataURL={project.images.X1}
+					placeholder='blur'
 					src={project.images.X1}
 					title={`${project.title}${project.complement} Picture`}
 					alt={`${project.title}${project.complement}`}
