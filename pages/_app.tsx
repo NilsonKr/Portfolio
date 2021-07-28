@@ -37,8 +37,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 	const [style, setStyle] = useState<TthemeStyles>('ligth');
 
 	const handleSwitchTheme = (pointer: HTMLElement) => {
-		console.log(pointer);
-
 		if (style === 'ligth') {
 			setStyle('dark');
 			pointer.style.animation = 'switch 1.5s forwards';

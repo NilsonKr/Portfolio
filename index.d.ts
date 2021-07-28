@@ -40,7 +40,7 @@ interface TProjects {
 
 type TDataFormat = {
 	landing: TLanding;
-	projects: TProjects;
+	projects: TProjects[];
 	extras: TExtras;
 };
 

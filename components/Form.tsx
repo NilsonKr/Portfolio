@@ -28,8 +28,6 @@ const Form = ({ handleSendEmail, dataStatus }: props) => {
 		try {
 			const response = await handleSendEmail(formInfo);
 
-			console.log(response);
-
 			if (!response.error) {
 				setFormInfo(INITIAL_STATE);
 			}

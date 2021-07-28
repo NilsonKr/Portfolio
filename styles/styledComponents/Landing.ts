@@ -10,7 +10,7 @@ export const DescriptionStyled = styled.div`
 	}
 	.desc--name {
 		position: relative;
-		margin: 2px;
+		margin: 0 auto;
 		width: 0ch;
 		font-size: 38px;
 		overflow: hidden;
@@ -47,6 +47,9 @@ export const DescriptionStyled = styled.div`
 		place-self: end;
 		padding-left: 100px;
 
+		.desc--name {
+			margin: 0px;
+		}
 		.desc--work {
 			font-size: 24px;
 		}
