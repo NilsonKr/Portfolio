@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 
 import '../styles/global.css';
@@ -47,11 +48,17 @@ function MyApp({ Component, pageProps }: AppProps) {
 	};
 
 	return (
-		<ThemeProvider theme={theme[style]}>
-			<changeThemeContext.Provider value={{ handleSwitchTheme }}>
-				<Component {...pageProps} />
-			</changeThemeContext.Provider>
-		</ThemeProvider>
+		<>
+			<Head>
+				<title>Nilson Diaz</title>
+				<meta name='viewport' content='initial-scale=1.0, width=device-width' />
+			</Head>
+			<ThemeProvider theme={theme[style]}>
+				<changeThemeContext.Provider value={{ handleSwitchTheme }}>
+					<Component {...pageProps} />
+				</changeThemeContext.Provider>
+			</ThemeProvider>
+		</>
 	);
 }
 
