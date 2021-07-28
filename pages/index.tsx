@@ -1,9 +1,6 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import { GetStaticProps } from 'next';
-import landingData from '../data/landing';
-import projectsData from '../data/projects';
-import extras from '../data/extras';
 
 import ProgressScrollBar from '@components/ProgressScrollBar';
 import Header from '@components/Header';
