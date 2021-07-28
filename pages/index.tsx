@@ -34,9 +34,11 @@ export const getStaticProps: GetStaticProps = async () => {
 			};
 		}
 	} else {
-		const landingInfo = (await import('../data/landing')).default;
-		const projectsInfo = (await import('../data/projects')).default;
-		const extras = (await import('../data/extras')).default;
+		//import data mocks
+
+		const landingInfo = {};
+		const projectsInfo = {};
+		const extras = {};
 
 		return {
 			props: {
