@@ -65,8 +65,8 @@ const ProjectCard = ({
 			</div>
 			<div className='project__pictures'>
 				<Image
-					width={500}
-					height={400}
+					width={450}
+					height={350}
 					blurDataURL={project.images.X1}
 					placeholder='blur'
 					src={project.images.X1}

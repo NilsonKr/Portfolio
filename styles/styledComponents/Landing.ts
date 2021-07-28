@@ -36,7 +36,6 @@ export const DescriptionStyled = styled.div`
 	}
 
 	p {
-		width: 90%;
 		margin: 10px 0 20px;
 		color: ${p => p.theme.textSecond};
 	}
@@ -54,6 +53,7 @@ export const DescriptionStyled = styled.div`
 			font-size: 24px;
 		}
 		p {
+			width: 80%;
 			font-size: 18px;
 		}
 	}
