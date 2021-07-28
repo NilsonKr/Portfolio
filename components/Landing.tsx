@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
-import LandingTechHub from './figures/LandingTechHub';
 
+import LandingTechHub from './figures/LandingTechHub';
 import { DescriptionStyled, LandingStyled } from '../styles/styledComponents/Landing';
 
 const Landing = ({ landingData }: { landingData: TLanding }) => {
