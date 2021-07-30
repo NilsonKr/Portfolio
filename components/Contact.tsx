@@ -62,7 +62,7 @@ const Contact = ({ extras }: { extras: TExtras }) => {
 					<ContactFigure image={extras.contact.X1} />
 					<div className='contact--gmail'>
 						<img src='/images/gmail.svg' alt='Gmail Inbox' title='Gmail Inbox' />
-						<p>nilson444diaz@gmail.com</p>
+						<p>nilson444dev@gmail.com</p>
 					</div>
 				</section>
 			</ContactStyled>

@@ -7,7 +7,7 @@ const mailHandler: NextApiHandler = async (req, res) => {
 		//Format email and send it through nodemailer
 		const formatMail = {
 			from: info.email,
-			to: process.env.USER_MAIL,
+			to: 'nilson444dev@gmail.com',
 			subject: info.subject,
 			text: info.message,
 			html: `<h3>${info.message}</h3> <em>${info.name}</em>`,
