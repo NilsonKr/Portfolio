@@ -15,7 +15,7 @@ const ContactFigure = ({ image }: { image: string }) => {
 			<div className='contact--socialMedia '>
 				<a
 					target='_blank'
-					href='https://co.linkedin.com/'
+					href='https://www.linkedin.com/in/nilson-felipe-diaz-perez-a80625218/'
 					className='glass--wrapper contact--linkedin'
 				>
 					<img
