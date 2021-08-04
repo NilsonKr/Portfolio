@@ -33,9 +33,6 @@ function useMediaQuery(minWidth: number, direction: string) {
 
 			setResult(validate);
 		}
-
-		//DEPRECATE SOLUTION FOR CALLSTACK!
-		// return () => window.removeEventListener('resize', listenResize);
 	}, [currentSize]);
 
 	return [isQuery];
