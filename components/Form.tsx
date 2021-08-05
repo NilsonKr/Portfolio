@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
 
-import { FieldTitleStyled } from 'styles/styledComponents/Contact';
+import { FieldTitleStyled } from '../styles/styledComponents/Contact';
 import Loader from './Loader';
 
 type FormField = HTMLInputElement | HTMLTextAreaElement;
@@ -74,7 +74,6 @@ const Form = ({ handleSendEmail, dataStatus }: props) => {
 				<FieldTitleStyled>Message</FieldTitleStyled>
 				<textarea
 					name='message'
-					id=''
 					value={formInfo.message}
 					onChange={ev => setEmailInfo(ev.target)}
 				></textarea>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { renderHook } from '@testing-library/react-hooks';
-import { render, screen, act } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ProgressScrollBar from '../../components/ProgressScrollBar';
 import useScrollBar from '../../hooks/useScrollBar';
 
@@ -15,7 +15,7 @@ describe('<ProgressBar />', () => {
 	});
 
 	test('useScrollBar hook', () => {
-		const { result, rerender } = renderHook(() => useScrollBar(25));
+		const { result } = renderHook(() => useScrollBar(25));
 
 		expect(result.current.scroll).toBe(25);
 	});
