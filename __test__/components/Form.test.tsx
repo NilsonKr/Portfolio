@@ -34,7 +34,7 @@ describe('<Form />', () => {
 		render(
 			<Form handleSendEmail={handleEmail} dataStatus={{ error: null, loading: false }} />
 		);
-
+		//Simultae Submit with empty form values
 		const button = screen.getByAltText('Send Email').parentElement;
 
 		userEvent.click(button!);
@@ -54,6 +54,7 @@ describe('<Form />', () => {
 			<Form handleSendEmail={handleEmail} dataStatus={{ error: null, loading: false }} />
 		);
 
+		//Simulate Type and then submit event
 		const button = screen.getByAltText('Send Email').parentElement;
 		const nameInput = screen.getByPlaceholderText(/your name/i);
 
