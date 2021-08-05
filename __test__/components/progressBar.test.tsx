@@ -17,6 +17,6 @@ describe('<ProgressBar />', () => {
 	test('useScrollBar hook', () => {
 		const { result } = renderHook(() => useScrollBar(25));
 
-		expect(result.current.scroll).toBe(205);
+		expect(result.current.scroll).toBe(25);
 	});
 });
