@@ -1,32 +1,11 @@
-import { useEffect, useState } from 'react';
+import useScrollbar from '../hooks/useScrollBar';
 import { ProgressScrollStyled } from '../styles/styledComponents/ProgressBar';
 
 const ProgressScrollBar = () => {
-	const [scroll, setScroll] = useState<number>(10);
-
-	const handleScroll = () => {
-		const scrollDown = document.documentElement.scrollTop;
-		const totalHeigth =
-			document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-		const scrollPorcent = (scrollDown / totalHeigth) * 100;
-
-		if (scrollPorcent > scroll) {
-			setScroll(scrollPorcent);
-		}
-	};
-
-	//Update Scroll Porcent listen the event
-	useEffect(() => {
-		if (scroll < 100) {
-			window.addEventListener('scroll', handleScroll);
-		}
-
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, [scroll]);
+	const { scroll } = useScrollbar(10);
 
 	return (
-		<ProgressScrollStyled scroll={scroll}>
+		<ProgressScrollStyled scroll={scroll} aria-label='progress'>
 			<div className='progress__hidden'></div>
 		</ProgressScrollStyled>
 	);

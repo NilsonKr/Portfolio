@@ -7,7 +7,8 @@
 		"dev": "next",
 		"build": "next build",
 		"start": "next start",
-		"dev:debug": "NODE_OPTIONS='--inspect' next"
+		"dev:debug": "NODE_OPTIONS='--inspect' next",
+		"test": "jest"
 	},
 	"keywords": [],
 	"author": "",
@@ -21,9 +22,17 @@
 		"typescript": "^4.3.5"
 	},
 	"devDependencies": {
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.0.0",
+		"@testing-library/react-hooks": "^7.0.1",
+		"@testing-library/user-event": "^13.2.1",
+		"@types/jest": "^26.0.24",
 		"@types/node": "^16.4.0",
 		"@types/nodemailer": "^6.4.4",
 		"@types/react": "^17.0.14",
-		"@types/styled-components": "^5.1.11"
+		"@types/styled-components": "^5.1.11",
+		"gitmoji-cli": "^4.4.1",
+		"husky": "^7.0.1",
+		"jest": "^27.0.6"
 	}
 }
