@@ -9,6 +9,6 @@ services:
       - '3000:3000'
     volumes:
       - '.:/app'
-      - '/aop/node_modules'
+      - '/app/node_modules'
 # Look at permission denied error after run docker
 # solution execute --> sudo chown -R $USER <directory>
