@@ -1,5 +1,38 @@
 const projectsInfo: TProjects[] = [
 	{
+		id: 'pwLqSaP3',
+		title: 'D',
+		complement: 'Hub',
+		description:
+			'Dhub is a descentralized storage, smart-contract based app where you can save your pics using IPFS and have them available to whenever you want to share them with your friends.Front built using Next.js & TypeScript, connecting to smart-contract write in solidity through web3.js and handle some features with Firebase.',
+		images: {
+			X1: 'https://i.imgur.com/khRqwAZ.png',
+			X2: 'https://i.imgur.com/khRqwAZ.png',
+		},
+		social: {
+			github: 'https://github.com/NilsonKr/DHub',
+			web: 'https://dhub.vercel.app/',
+		},
+		technologies: {
+			ligth: [
+				'/images/nextjs.svg',
+				'/images/typescript.svg',
+				'/images/solidity.svg',
+				'/images/web3.svg',
+				'/images/firebase.svg',
+				'/images/ipfs.svg',
+			],
+			dark: [
+				'/images/nextjslight.svg',
+				'/images/typescript.svg',
+				'/images/solidity.svg',
+				'/images/web3.svg',
+				'/images/firebase.svg',
+				'/images/ipfslight.svg',
+			],
+		},
+	},
+	{
 		id: 'p2jHVBr',
 		title: 'Crazy',
 		complement: 'Punks',
@@ -60,41 +93,6 @@ const projectsInfo: TProjects[] = [
 				'/images/nodejsLigth.svg',
 				'/images/expressLigth.svg',
 				'/images/socketio.svg',
-				'/images/mongo.svg',
-				'/images/passportLigth.svg',
-			],
-		},
-	},
-	{
-		id: 'pwLqSaP3',
-		title: 'Platzi',
-		complement: 'Video',
-		description:
-			' Fullstack Video Platform built with knowledge  obtained in JavaScript school at Platzi. Includes Authentication with third-parties as Google & Twitter Server-side Render , own API  & Frontend made with React.js/Redux',
-		images: {
-			X1: 'https://i.imgur.com/MNaBoll.png',
-			X2: 'https://i.imgur.com/McrJscr.png',
-		},
-		social: {
-			github: 'https://github.com/NilsonKr/Platzi-video',
-			web: 'https://platzivideo1.herokuapp.com',
-		},
-		technologies: {
-			ligth: [
-				'/images/javascript.svg',
-				'/images/react.svg',
-				'/images/redux.svg',
-				'/images/nodejs.svg',
-				'/images/express.svg',
-				'/images/mongo.svg',
-				'/images/passport.svg',
-			],
-			dark: [
-				'/images/javascript.svg',
-				'/images/react.svg',
-				'/images/redux.svg',
-				'/images/nodejsLigth.svg',
-				'/images/expressLigth.svg',
 				'/images/mongo.svg',
 				'/images/passportLigth.svg',
 			],
